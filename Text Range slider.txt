@@ -1,0 +1,18 @@
+========== RANGE SLIDER ==========
+.range__value-number
+50
+
+========== RANGE SLIDER JS ==========
+// Insert the value of the input range
+
+// Calculate the position of the input thumb
+// rangeInput.value = 50, rangeInput.max = 100, (50 / 100 = 0.5)
+// rangeInput.offsetWidth = 248, rangeThumb.offsetWidth = 32, (248 - 32 = 216)
+
+// We insert the position of the input thumb
+// thumbPosition = 0.5, space = 216 (0.5 * 216 = 108)
+
+// We insert the width to the slider with the value of the input value
+// rangeInput.value = 50, ancho = 50%
+
+// We call the range input
