@@ -1,0 +1,86 @@
+/*=============== RANGE SLIDER ===============*/
+.container{
+   height: 100vh;
+   margin-inline: 1.5rem;
+   display: grid;
+   place-items: center;
+}
+
+// Custom input range
+.range{
+   height: 64px;
+   width: 100%;
+   max-width: 332px;
+   background-color: var(--first-color-light);
+   border-radius: 4rem;
+   box-shadow: 0 6px 16px hsla(256, 72%, 24%, .15);
+   padding-inline: 2.5rem;
+   display: grid;
+
+   &__content{
+      position: relative;
+      width: 100%;
+      display: grid;
+      place-items: center;
+   }
+   &__slider{
+      width: 100%;
+      height: 16px;
+      background-color: var(--first-color-lighten);
+      border-radius: 4rem;
+      box-shadow: 0 4px 12px hsla(256, 72%, 24%, .2);
+      overflow: hidden;
+
+      &-line{
+         width: 100%;
+         height: 100%;
+         background: var(--gradient-color);
+         width: 0;
+      }
+   }
+   &__thumb{
+      width: 32px;
+      height: 32px;
+      background-color: var(--first-color-lighten);
+      border-radius: 50%;
+      box-shadow: 0 0 12px hsla(256, 72%, 24%, .2);
+      position: absolute;
+   }
+   // Value input range
+   &__value{
+      width: 64px;
+      height: 64px;
+      background: var(--gradient-color);
+      position: absolute;
+      top: -82px;
+      left: -16px;
+      border-radius: 2rem 2rem 2rem .25rem;
+      transform: rotate(-45deg);
+      display: grid;
+      place-items: center;
+
+      &-number{
+         transform: rotate(45deg);
+         color: var(--white-color);
+         font-size: var(--h1-font-size);
+      }
+   }
+   // Default input range
+   &__input{
+      appearance: none;
+      width: 100%;
+      height: 16px;
+      position: absolute;
+      opacity: 0;
+
+      &::-webkit-slider-thumb{
+         appearance: none;
+         width: 32px;
+         height: 32px;
+
+         &:hover{
+            cursor: pointer;
+         }
+      }
+   }
+}
